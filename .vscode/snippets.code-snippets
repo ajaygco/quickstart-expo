@@ -1,0 +1,51 @@
+{
+  // React Native
+  "New React Native Component": {
+    "prefix": "nrnc",
+    "scope": "javascript,javascriptreact",
+    "description": "New React Native Component",
+    "body": [
+      "// Modules",
+      "import React from \"react\";",
+      "import { View } from \"react-native\";",
+      "",
+      "// Component: Presentation",
+      "export const ${1:ComponentName}Ui = () => {",
+      "  return <View className=\"flex-1\">$0</View>;",
+      "};",
+      "",
+      "// Component: Logic",
+      "export const ${1:ComponentName} = () => {",
+      "  return <${1:ComponentName}Ui />;",
+      "};",
+      ""
+    ]
+  },
+  // React Native
+  "New Memoized React Native Component": {
+    "prefix": "nmrnc",
+    "scope": "javascript,javascriptreact",
+    "description": "New Memoized React Native Component",
+    "body": [
+      "// Modules",
+      "import React from \"react\";",
+      "import { View } from \"react-native\";",
+      "",
+      "// Component: Presentation",
+      "export const ${1:ComponentName}Ui = () => {",
+      "  return <View className=\"flex-1\">$0</View>;",
+      "};",
+      "",
+      "// Component: Logic",
+      "export const ${1:ComponentName}Logic = (props) => {",
+      "  return <${1:ComponentName}Ui {...props} />;",
+      "};",
+      "",
+      "// Component: Memo",
+      "export const ${1:ComponentName} = React.memo((props) => {",
+      "  return <${1:ComponentName}Logic {...props} />;",
+      "});",
+      ""
+    ]
+  }
+}
