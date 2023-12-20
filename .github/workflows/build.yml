@@ -32,3 +32,14 @@ jobs:
       # Run Lint
       - name: Run Lint
         run: yarn lint
+
+      # Run Unit Tests
+      - name: Run Unit Tests
+        run: yarn test
+
+      # Upload Coverage Artifact
+      - name: Upload Coverage Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: coverage
+          path: coverage
