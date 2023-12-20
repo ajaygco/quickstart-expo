@@ -28,6 +28,9 @@ yarn-error.*
 .DS_Store
 *.pem
 
+# jest
+coverage
+
 # env files
 .env*
 !.env.example
