@@ -25,6 +25,7 @@
   "devDependencies": {
     "@babel/core": "^7.20.0",
     "@testing-library/react-native": "^12.4.2",
+    "babel-jest": "^29.7.0",
     "babel-plugin-transform-inline-environment-variables": "^0.4.4",
     "eslint": "^8.16.0",
     "eslint-config-prettier": "^8.5.0",

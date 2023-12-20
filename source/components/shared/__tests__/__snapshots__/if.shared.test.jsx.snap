@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`If should render children when condition is true 1`] = `
+<View
+  testID="element"
+/>
+`;
+
+exports[`If should render nothing when condition is false 1`] = `null`;
+
+exports[`If should render renderWhenFalse when condition is false 1`] = `
+<View
+  testID="falseElement"
+/>
+`;
+
+exports[`If should render renderWhenTrue when condition is true 1`] = `
+<View
+  testID="trueElement"
+/>
+`;
