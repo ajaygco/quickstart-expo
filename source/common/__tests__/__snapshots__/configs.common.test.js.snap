@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`configs.common appConfig should match snapshot 1`] = `
+{
+  "appEmail": "team@app.com",
+  "appName": "Kickstart",
+  "copyrightYear": 2099,
+  "developerName": "Your Company",
+  "developerUrl": "https://yourcompany.co",
+}
+`;
