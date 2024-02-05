@@ -17,25 +17,23 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Use Node 20.x
-      - name: Use Node 20.x
-        uses: actions/setup-node@v3
+      # Setup Bun
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
         with:
-          node-version: 20
-          cache-dependency-path: yarn.lock
-          cache: "yarn"
+          bun-version: latest
 
       # Install Packages
       - name: Install Packages
-        run: yarn install --frozen-lockfile
+        run: bun install
 
       # Run Lint
       - name: Run Lint
-        run: yarn lint
+        run: bun run lint
 
       # Run Unit Tests
       - name: Run Unit Tests
-        run: yarn test
+        run: bun run test
 
       # Upload Coverage Artifact
       - name: Upload Coverage Artifact
