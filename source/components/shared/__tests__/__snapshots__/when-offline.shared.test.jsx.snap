@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WhenOffline should render children when offline 1`] = `
+<Text>
+  Offline Content
+</Text>
+`;
+
+exports[`WhenOffline should render nothing when online 1`] = `null`;

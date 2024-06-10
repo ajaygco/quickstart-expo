@@ -1,4 +1,4 @@
-// yarn test source/components/shared/__tests__/if.shared.test.jsx
+// bunx jest source/components/shared/__tests__/if.shared.test.jsx
 
 import React from "react";
 import { View } from "react-native";
@@ -11,7 +11,7 @@ describe("If", () => {
     const wrapper = render(
       <If condition={true}>
         <View testID="element" />
-      </If>
+      </If>,
     );
 
     const element = wrapper.getByTestId("element");
@@ -24,7 +24,7 @@ describe("If", () => {
     const wrapper = render(
       <If condition={false}>
         <View testID="element" />
-      </If>
+      </If>,
     );
 
     const element = wrapper.queryByTestId("element");
@@ -39,7 +39,7 @@ describe("If", () => {
         condition={true}
         renderWhenTrue={<View testID="trueElement" />}
         renderWhenFalse={<View testID="falseElement" />}
-      />
+      />,
     );
 
     const element = wrapper.queryByTestId("trueElement");
@@ -54,7 +54,7 @@ describe("If", () => {
         condition={false}
         renderWhenTrue={<View testID="trueElement" />}
         renderWhenFalse={<View testID="falseElement" />}
-      />
+      />,
     );
 
     const element = wrapper.queryByTestId("falseElement");
