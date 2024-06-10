@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoadingState should render correctly 1`] = `
+<View
+  style={
+    [
+      {
+        "alignItems": "center",
+      },
+      {
+        "justifyContent": "center",
+      },
+    ]
+  }
+>
+  <ActivityIndicator />
+</View>
+`;

@@ -24,8 +24,8 @@
     "process": "readonly",
     "module": "readonly",
 
-    // Vite
-    "__dirname": "readonly"
+    // React Native
+    "__DEV__": "readonly"
   },
   "settings": {
     "react": {

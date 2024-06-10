@@ -3,7 +3,7 @@ import * as Haptics from "expo-haptics";
 import { Alert as RnAlert } from "react-native";
 
 // Helpers
-import { captureException } from "@app/helpers/analytics.helper";
+import { captureException } from "helpers/analytics.helper";
 
 // Consturctor: Alert
 const _alert = ({ title, message, buttons = [], options = {} }) => {
