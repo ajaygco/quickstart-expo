@@ -10,7 +10,7 @@ const ignoreLogs = [
 ];
 
 // Ignore Warnings
-LogBox.ignoreLogs();
+LogBox.ignoreLogs(ignoreLogs);
 
 // LogBox - Without Ignored
 const withoutIgnored = (logger) => {
