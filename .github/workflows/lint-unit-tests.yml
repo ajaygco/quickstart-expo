@@ -1,6 +1,7 @@
-name: Build
+name: Lint and Unit Test
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
@@ -9,8 +10,8 @@ on:
       - master
 
 jobs:
-  main:
-    name: Build
+  lint:
+    name: Run Lint
     runs-on: ubuntu-latest
     steps:
       # Checkout
@@ -23,13 +24,31 @@ jobs:
         with:
           bun-version: latest
 
-      # Install Packages
-      - name: Install Packages
+      # Install Dependencies
+      - name: Install Dependencies
         run: bun install
 
       # Run Lint
       - name: Run Lint
         run: bun run lint
+
+  unit-tests:
+    name: Run Unit Tests
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Setup Bun
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      # Install Dependencies
+      - name: Install Dependencies
+        run: bun install
 
       # Run Unit Tests
       - name: Run Unit Tests
@@ -37,7 +56,7 @@ jobs:
 
       # Upload Coverage Artifact
       - name: Upload Coverage Artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: coverage
           path: coverage
