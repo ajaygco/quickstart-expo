@@ -2,6 +2,13 @@
 import React from "react";
 import * as SplashScreen from "expo-splash-screen";
 import { View } from "react-native";
+import {
+  useFonts,
+  Figtree_300Light,
+  Figtree_400Regular,
+  Figtree_600SemiBold,
+  Figtree_900Black,
+} from "@expo-google-fonts/figtree";
 
 // Navigators
 import { AppNavigator } from "components/app-navigator";
@@ -28,6 +35,14 @@ export const AppSplashUi = ({ isAppReady, onLayoutRootView }) => {
 
 // Component: Logic
 export const AppSplash = () => {
+  // Hooks
+  const [areFontsLoaded] = useFonts({
+    Figtree_300Light,
+    Figtree_400Regular,
+    Figtree_600SemiBold,
+    Figtree_900Black,
+  });
+
   // State
   const [isAppReady, setIsAppReady] = React.useState(false);
 
@@ -39,8 +54,10 @@ export const AppSplash = () => {
   }, [isAppReady]);
 
   React.useEffect(() => {
-    setIsAppReady(true);
-  }, []);
+    if (areFontsLoaded) {
+      setIsAppReady(true);
+    }
+  }, [areFontsLoaded]);
 
   return (
     <AppSplashUi isAppReady={isAppReady} onLayoutRootView={onLayoutRootView} />

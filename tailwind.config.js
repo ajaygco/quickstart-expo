@@ -1,7 +1,11 @@
 module.exports = {
   content: ["./source/**/*.{js,jsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["Figtree", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };
