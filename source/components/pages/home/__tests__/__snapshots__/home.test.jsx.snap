@@ -1,0 +1,205 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home should render correctly 1`] = `
+<RNCSafeAreaView
+  edges={
+    {
+      "bottom": "additive",
+      "left": "additive",
+      "right": "additive",
+      "top": "additive",
+    }
+  }
+  style={
+    [
+      {
+        "width": "100%",
+      },
+      {
+        "height": "100%",
+      },
+      {
+        "backgroundColor": "#fff",
+      },
+      {
+        "display": "flex",
+      },
+      {
+        "flexDirection": "column",
+      },
+      {
+        "alignItems": "center",
+      },
+      {
+        "justifyContent": "center",
+      },
+    ]
+  }
+>
+  <View
+    style={
+      [
+        {
+          "marginBottom": 48,
+        },
+      ]
+    }
+  >
+    <Text
+      allowFontScaling={false}
+      style={
+        [
+          {
+            "fontSize": 36,
+            "lineHeight": 40,
+          },
+        ]
+      }
+    >
+      👋
+    </Text>
+  </View>
+  <View
+    style={
+      [
+        {
+          "marginBottom": 8,
+        },
+      ]
+    }
+  >
+    <Text
+      allowFontScaling={false}
+      style={
+        [
+          {
+            "fontSize": 30,
+            "lineHeight": 36,
+          },
+          {
+            "fontFamily": "Figtree",
+          },
+          {
+            "fontWeight": "900",
+          },
+        ]
+      }
+    >
+      Get Started
+    </Text>
+  </View>
+  <View
+    style={
+      [
+        {
+          "width": "100%",
+        },
+        {
+          "paddingLeft": 32,
+          "paddingRight": 32,
+        },
+        {
+          "marginBottom": 24,
+        },
+      ]
+    }
+  >
+    <Text
+      allowFontScaling={false}
+      style={
+        [
+          {
+            "fontSize": 18,
+            "lineHeight": 28,
+          },
+          {
+            "textAlign": "center",
+          },
+        ]
+      }
+    >
+      This quickstart has React Navigation, NativeWind and Expo Fonts pre-configured and comes with lots of useful components.
+    </Text>
+  </View>
+  <View
+    style={
+      [
+        {
+          "width": "100%",
+        },
+        {
+          "paddingLeft": 32,
+          "paddingRight": 32,
+        },
+      ]
+    }
+  >
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      hitSlop={12}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+    >
+      <Text
+        allowFontScaling={false}
+        style={
+          [
+            {
+              "fontSize": 18,
+              "lineHeight": 28,
+            },
+            {
+              "textAlign": "center",
+            },
+          ]
+        }
+      >
+        Made with 🍕 by
+         
+        <Text
+          allowFontScaling={false}
+          style={
+            [
+              {
+                "fontSize": 18,
+                "lineHeight": 28,
+              },
+              {
+                "color": "#3b82f6",
+              },
+            ]
+          }
+        >
+          @ajaygco
+        </Text>
+      </Text>
+    </View>
+  </View>
+</RNCSafeAreaView>
+`;
