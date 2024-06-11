@@ -34,6 +34,12 @@ exports[`EmptyState should not render illustration when empty 1`] = `
           "color": "#1f2937",
         },
         {
+          "fontFamily": "Figtree",
+        },
+        {
+          "fontWeight": "700",
+        },
+        {
           "marginBottom": 8,
         },
       ]
@@ -56,7 +62,7 @@ exports[`EmptyState should not render illustration when empty 1`] = `
           "textAlign": "center",
         },
         {
-          "fontFamily": "ui-sans-serif",
+          "fontFamily": "Figtree",
         },
       ]
     }
@@ -128,6 +134,12 @@ exports[`EmptyState should render correctly 1`] = `
           "color": "#1f2937",
         },
         {
+          "fontFamily": "Figtree",
+        },
+        {
+          "fontWeight": "700",
+        },
+        {
           "marginBottom": 8,
         },
       ]
@@ -150,7 +162,7 @@ exports[`EmptyState should render correctly 1`] = `
           "textAlign": "center",
         },
         {
-          "fontFamily": "ui-sans-serif",
+          "fontFamily": "Figtree",
         },
       ]
     }
