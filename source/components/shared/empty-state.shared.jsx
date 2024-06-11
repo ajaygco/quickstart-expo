@@ -20,7 +20,7 @@ export const EmptyStateUi = ({ title, message, illustration }) => {
       <If condition={title}>
         <Text
           allowFontScaling={false}
-          className="text-xl text-gray-800 font-display mb-2"
+          className="text-xl text-gray-800 font-sans font-bold mb-2"
         >
           {title}
         </Text>
