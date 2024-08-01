@@ -10,6 +10,7 @@ on:
       - master
 
 jobs:
+  # Lint
   lint:
     name: Run Lint
     runs-on: ubuntu-latest
@@ -24,14 +25,15 @@ jobs:
         with:
           bun-version: latest
 
-      # Install Dependencies
-      - name: Install Dependencies
-        run: bun install
+      # Install Packages
+      - name: Install Packages
+        run: bun install --frozen-lockfile
 
       # Run Lint
       - name: Run Lint
         run: bun run lint
 
+  # Tests
   unit-tests:
     name: Run Unit Tests
     runs-on: ubuntu-latest
@@ -46,9 +48,9 @@ jobs:
         with:
           bun-version: latest
 
-      # Install Dependencies
-      - name: Install Dependencies
-        run: bun install
+      # Install Packages
+      - name: Install Packages
+        run: bun install --frozen-lockfile
 
       # Run Unit Tests
       - name: Run Unit Tests
@@ -60,3 +62,26 @@ jobs:
         with:
           name: coverage
           path: coverage
+
+  # Type Check
+  type-check:
+    name: Run Type Check
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Setup Bun
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      # Install Packages
+      - name: Install Packages
+        run: bun install --frozen-lockfile
+
+      # Run Type Check
+      - name: Run Type Check
+        run: bun run tsc

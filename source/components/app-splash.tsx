@@ -1,17 +1,24 @@
 // Modules
-import React from "react";
+import * as React from "react";
 import * as SplashScreen from "expo-splash-screen";
 import { View } from "react-native";
 import {
   useFonts,
-  Figtree_300Light,
   Figtree_400Regular,
   Figtree_600SemiBold,
   Figtree_900Black,
 } from "@expo-google-fonts/figtree";
 
 // Navigators
-import { AppNavigator } from "components/app-navigator";
+import { AppNavigator } from "@app/components/app-navigator";
+
+// Types
+interface AppSplashCommonProps {}
+interface AppSplashUiProps extends AppSplashCommonProps {
+  isAppReady: boolean;
+  onLayoutRootView: () => void;
+}
+interface AppSplashProps extends AppSplashCommonProps {}
 
 // NOTE:
 // Keep the splash screen visible while we do startup work.
@@ -21,7 +28,10 @@ import { AppNavigator } from "components/app-navigator";
 SplashScreen.preventAutoHideAsync();
 
 // Component: Presentation
-export const AppSplashUi = ({ isAppReady, onLayoutRootView }) => {
+export const AppSplashUi = ({
+  isAppReady,
+  onLayoutRootView,
+}: AppSplashUiProps): React.ReactElement | null => {
   if (isAppReady) {
     return (
       <View onLayout={onLayoutRootView} className="w-full h-full">
@@ -34,17 +44,16 @@ export const AppSplashUi = ({ isAppReady, onLayoutRootView }) => {
 };
 
 // Component: Logic
-export const AppSplash = () => {
+export const AppSplash = ({}: AppSplashProps): React.ReactElement => {
   // Hooks
   const [areFontsLoaded] = useFonts({
-    Figtree_300Light,
     Figtree_400Regular,
     Figtree_600SemiBold,
     Figtree_900Black,
   });
 
   // State
-  const [isAppReady, setIsAppReady] = React.useState(false);
+  const [isAppReady, setIsAppReady] = React.useState<boolean>(false);
 
   // On Layout Root View
   const onLayoutRootView = React.useCallback(async () => {
