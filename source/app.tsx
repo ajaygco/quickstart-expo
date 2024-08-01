@@ -1,5 +1,4 @@
 // Modules
-import { LogBox } from "react-native";
 import { registerRootComponent } from "expo";
 
 // Components
