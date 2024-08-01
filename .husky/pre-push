@@ -1,0 +1,3 @@
+CI=true bun run lint
+CI=true bun run test
+CI=true bun run tsc
