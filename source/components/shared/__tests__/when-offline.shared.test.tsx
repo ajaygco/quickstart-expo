@@ -13,7 +13,7 @@ jest.mock("react-native-offline", () => ({
 
 describe("WhenOffline", () => {
   it("should render children when offline", () => {
-    // @ts-ignore
+    // @ts-expect-error -- TS doesn't know this is a mock
     useIsConnected.mockReturnValueOnce(false);
 
     const wrapper = render(
@@ -30,7 +30,7 @@ describe("WhenOffline", () => {
   });
 
   it("should render nothing when online", () => {
-    // @ts-ignore
+    // @ts-expect-error -- TS doesn't know this is a mock
     useIsConnected.mockReturnValueOnce(true);
 
     const wrapper = render(
