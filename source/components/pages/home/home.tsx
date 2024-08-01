@@ -1,6 +1,5 @@
 // Modules
 import * as React from "react";
-import { SafeAreaView } from "react-native-safe-area-context";
 import { Text, View } from "react-native";
 
 // Types
@@ -11,13 +10,14 @@ export interface HomeProps extends HomeCommonProps {}
 // Component: Presentation
 export const HomeUi = ({}: HomeUiProps): React.ReactElement => {
   return (
-    <SafeAreaView className="w-screen h-screen bg-red flex flex-col items-center justify-center">
-      <View className="flex-1 mb-12">
-        <Text allowFontScaling={false} className="text-4xl">
-          👋
-        </Text>
-      </View>
-    </SafeAreaView>
+    <View className="p-4">
+      <Text allowFontScaling={false} className="text-lg font-sans">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci hic
+        molestias delectus, labore dicta accusantium soluta quas tenetur
+        debitis, consequuntur sunt quaerat eos ea asperiores modi quam, aperiam
+        facilis quia?
+      </Text>
+    </View>
   );
 };
 
