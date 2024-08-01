@@ -3,30 +3,20 @@ import * as React from "react";
 import { useIsConnected } from "react-native-offline";
 
 // Types
-interface WhenOnlineCommonProps {
+interface WhenOnlineProps {
   children: React.ReactElement;
 }
-export interface WhenOnlineUiProps extends WhenOnlineCommonProps {
-  isConnected: boolean | null;
-}
-export interface WhenOnlineProps extends WhenOnlineCommonProps {}
 
-// Component: Presentation
-export const WhenOnlineUi = ({
+// Component
+export const WhenOnline = ({
   children,
-  isConnected,
-}: WhenOnlineUiProps): React.ReactElement | null => {
-  if (isConnected) {
+}: WhenOnlineProps): React.ReactElement | null => {
+  // Hooks
+  const isDeviceConnected: boolean | null = useIsConnected();
+
+  if (isDeviceConnected) {
     return children;
   }
 
   return null;
-};
-
-// Component: Logic
-export const WhenOnline = (props: WhenOnlineProps): React.ReactElement => {
-  // Hooks
-  const isDeviceConnected: boolean | null = useIsConnected();
-
-  return <WhenOnlineUi isConnected={isDeviceConnected} {...props} />;
 };

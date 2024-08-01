@@ -9,12 +9,12 @@ type IfProps = {
   children?: React.ReactElement;
 };
 
-// Component: Presentation
-export const IfUi = ({
+// Component
+export const If = ({
   condition,
   renderWhenTrue,
   renderWhenFalse,
-  children = undefined,
+  children,
 }: IfProps): React.ReactElement | undefined => {
   if (children && condition) {
     return children;
@@ -26,13 +26,3 @@ export const IfUi = ({
 
   return renderWhenFalse;
 };
-
-// Component: Logic
-export const IfLogic = (props: IfProps): React.ReactElement => {
-  return <IfUi {...props} />;
-};
-
-// Component: Memo
-export const If = React.memo((props: IfProps): React.ReactElement => {
-  return <IfLogic {...props} />;
-});

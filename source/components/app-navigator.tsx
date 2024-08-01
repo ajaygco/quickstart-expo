@@ -9,30 +9,23 @@ import { StatusBar } from "expo-status-bar";
 import { Home } from "@app/components/pages/home/home";
 
 // Types
-interface AppNavigatorCommonProps {}
-interface AppNavigatorUiProps extends AppNavigatorCommonProps {}
-interface AppNavigatorProps extends AppNavigatorCommonProps {}
+type AppNavigatorProps = {};
 
-// Create Navigators
+// Navigators
 const Stack = createNativeStackNavigator();
 
-// Component: Presentation
-export const AppNavigatorUi = ({}: AppNavigatorUiProps): React.ReactElement => {
-  return (
-    <Stack.Navigator>
-      <Stack.Screen name="Home" component={Home} />
-    </Stack.Navigator>
-  );
-};
-
-// Component: Logic
-export const AppNavigator = ({}: AppNavigatorProps): React.ReactElement => {
+// Component
+export const AppNavigator: React.FC<
+  AppNavigatorProps
+> = (): React.ReactElement => {
   return (
     <SafeAreaProvider>
       <StatusBar style="inverted" />
 
       <NavigationContainer>
-        <AppNavigatorUi />
+        <Stack.Navigator>
+          <Stack.Screen name="Home" component={Home} />
+        </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>
   );

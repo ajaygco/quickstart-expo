@@ -13,12 +13,7 @@ import {
 import { AppNavigator } from "@app/components/app-navigator";
 
 // Types
-interface AppSplashCommonProps {}
-interface AppSplashUiProps extends AppSplashCommonProps {
-  isAppReady: boolean;
-  onLayoutRootView: () => void;
-}
-interface AppSplashProps extends AppSplashCommonProps {}
+type AppSplashProps = {};
 
 // NOTE:
 // Keep the splash screen visible while we do startup work.
@@ -27,24 +22,10 @@ interface AppSplashProps extends AppSplashCommonProps {}
 // this might be called too late, when the splash screen is already hidden.
 SplashScreen.preventAutoHideAsync();
 
-// Component: Presentation
-export const AppSplashUi = ({
-  isAppReady,
-  onLayoutRootView,
-}: AppSplashUiProps): React.ReactElement | null => {
-  if (isAppReady) {
-    return (
-      <View onLayout={onLayoutRootView} className="w-full h-full">
-        <AppNavigator />
-      </View>
-    );
-  }
-
-  return null;
-};
-
-// Component: Logic
-export const AppSplash = ({}: AppSplashProps): React.ReactElement => {
+// Component
+export const AppSplash: React.FC<
+  AppSplashProps
+> = (): React.ReactElement | null => {
   // Hooks
   const [areFontsLoaded] = useFonts({
     Figtree_400Regular,
@@ -66,7 +47,13 @@ export const AppSplash = ({}: AppSplashProps): React.ReactElement => {
     setIsAppReady(areFontsLoaded);
   }, [areFontsLoaded]);
 
+  if (!isAppReady) {
+    return null;
+  }
+
   return (
-    <AppSplashUi isAppReady={isAppReady} onLayoutRootView={onLayoutRootView} />
+    <View onLayout={onLayoutRootView} className="w-full h-full">
+      <AppNavigator />
+    </View>
   );
 };
