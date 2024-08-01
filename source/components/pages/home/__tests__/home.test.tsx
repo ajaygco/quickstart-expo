@@ -9,7 +9,7 @@ describe("Home", () => {
   it("should render correctly", () => {
     const wrapper = render(<Home />);
 
-    const titleElement = wrapper.getByText("👋");
+    const titleElement = wrapper.getByText(/Lorem ipsum/);
 
     expect(titleElement).toBeTruthy();
 

@@ -84,4 +84,4 @@ jobs:
 
       # Run Type Check
       - name: Run Type Check
-        run: bun run tsc
+        run: bun run tscheck

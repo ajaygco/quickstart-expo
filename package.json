@@ -10,7 +10,7 @@
     "web": "expo start --web",
     "lint": "node_modules/.bin/eslint . --ext js,ts,tsx",
     "test": "node_modules/.bin/jest",
-    "tsc": "node_modules/.bin/tsc",
+    "tscheck": "node_modules/.bin/tsc",
     "prepare": "husky"
   },
   "dependencies": {

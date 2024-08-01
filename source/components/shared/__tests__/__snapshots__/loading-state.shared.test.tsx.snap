@@ -2,7 +2,16 @@
 
 exports[`LoadingState should render correctly 1`] = `
 <View
-  className="items-center justify-center"
+  style={
+    [
+      {
+        "alignItems": "center",
+      },
+      {
+        "justifyContent": "center",
+      },
+    ]
+  }
 >
   <ActivityIndicator />
 </View>

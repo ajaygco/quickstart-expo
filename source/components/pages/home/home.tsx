@@ -3,12 +3,10 @@ import * as React from "react";
 import { Text, View } from "react-native";
 
 // Types
-interface HomeCommonProps {}
-export interface HomeUiProps extends HomeCommonProps {}
-export interface HomeProps extends HomeCommonProps {}
+type HomeProps = {};
 
 // Component: Presentation
-export const HomeUi = ({}: HomeUiProps): React.ReactElement => {
+export const Home: React.FC<HomeProps> = (): React.ReactElement => {
   return (
     <View className="p-4">
       <Text allowFontScaling={false} className="text-lg font-sans">
@@ -19,9 +17,4 @@ export const HomeUi = ({}: HomeUiProps): React.ReactElement => {
       </Text>
     </View>
   );
-};
-
-// Component: Logic
-export const Home = ({}: HomeProps): React.ReactElement => {
-  return <HomeUi />;
 };
