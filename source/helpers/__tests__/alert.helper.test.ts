@@ -1,8 +1,8 @@
-// bunx jest source/helpers/__tests__/alert.helper.test.js
+// bun run test source/helpers/__tests__/alert.helper.test.ts
 
 import * as Haptics from "expo-haptics";
 
-import { Alert } from "helpers/alert.helper";
+import { Alert } from "@app/helpers/alert.helper";
 
 jest.mock("expo-haptics", () => ({
   notificationAsync: jest.fn(),

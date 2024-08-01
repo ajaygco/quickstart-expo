@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home should render correctly 1`] = `
+<RNCSafeAreaView
+  className="w-full h-full bg-white flex flex-col items-center justify-center"
+  edges={
+    {
+      "bottom": "additive",
+      "left": "additive",
+      "right": "additive",
+      "top": "additive",
+    }
+  }
+>
+  <View
+    className="mb-12"
+  >
+    <Text
+      allowFontScaling={false}
+      className="text-4xl"
+    >
+      👋
+    </Text>
+  </View>
+  <View
+    className="mb-2"
+  >
+    <Text
+      allowFontScaling={false}
+      className="text-3xl font-sans font-black"
+    >
+      Get Started
+    </Text>
+  </View>
+  <View
+    className="w-full px-8 mb-6"
+  >
+    <Text
+      allowFontScaling={false}
+      className="text-lg text-center"
+    >
+      This quickstart has React Navigation, NativeWind and Expo Fonts pre-configured and comes with lots of useful components.
+    </Text>
+  </View>
+</RNCSafeAreaView>
+`;

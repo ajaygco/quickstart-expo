@@ -1,10 +1,10 @@
-// bunx jest source/components/shared/__tests__/if.shared.test.jsx
+// bun run test source/components/shared/__tests__/if.shared.test.tsx
 
-import React from "react";
+import * as React from "react";
 import { View } from "react-native";
 import { render } from "@testing-library/react-native";
 
-import { If } from "components/shared/if.shared";
+import { If } from "@app/components/shared/if.shared";
 
 describe("If", () => {
   it("should render children when condition is true", () => {

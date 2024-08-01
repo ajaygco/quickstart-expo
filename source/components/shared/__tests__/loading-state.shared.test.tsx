@@ -1,9 +1,9 @@
-// bunx jest source/components/shared/__tests__/loading-state.shared.test.jsx
+// bun run test source/components/shared/__tests__/loading-state.shared.test.tsx
 
-import React from "react";
+import * as React from "react";
 import { render } from "@testing-library/react-native";
 
-import { LoadingState } from "components/shared/loading-state.shared";
+import { LoadingState } from "@app/components/shared/loading-state.shared";
 
 describe("LoadingState", () => {
   it("should render correctly", () => {

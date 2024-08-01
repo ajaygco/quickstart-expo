@@ -1,11 +1,11 @@
-// bunx jest source/components/shared/__tests__/when-online.shared.test.jsx
+// bun run test source/components/shared/__tests__/when-online.shared.test.tsx
 
-import React from "react";
+import * as React from "react";
 import { useIsConnected } from "react-native-offline";
 import { render } from "@testing-library/react-native";
 import { Text } from "react-native";
 
-import { WhenOnline } from "components/shared/when-online.shared";
+import { WhenOnline } from "@app/components/shared/when-online.shared";
 
 jest.mock("react-native-offline", () => ({
   useIsConnected: jest.fn(),
@@ -13,6 +13,7 @@ jest.mock("react-native-offline", () => ({
 
 describe("WhenOnline", () => {
   it("should render children when online", () => {
+    // @ts-ignore
     useIsConnected.mockReturnValue(true);
 
     const wrapper = render(
@@ -29,6 +30,7 @@ describe("WhenOnline", () => {
   });
 
   it("should render nothing when offline", () => {
+    // @ts-ignore
     useIsConnected.mockReturnValue(false);
 
     const wrapper = render(
