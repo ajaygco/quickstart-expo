@@ -1,7 +1,7 @@
 {
   "name": "kickstart",
   "version": "1.0.0",
-  "main": "source/main.jsx",
+  "main": "source/app.tsx",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",

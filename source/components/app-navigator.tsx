@@ -19,7 +19,7 @@ const Stack = createNativeStackNavigator();
 export const AppNavigatorUi = ({}: AppNavigatorUiProps): React.ReactElement => {
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Navigator screenOptions={{ headerShown: true }}>
         <Stack.Screen name="Home" component={Home} />
       </Stack.Navigator>
     </NavigationContainer>
