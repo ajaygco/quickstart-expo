@@ -1,6 +1,6 @@
-// yarn test source/common/__tests__/configs.common.test.js
+// bun run test source/common/__tests__/configs.common.test.ts
 
-import { appConfig } from "common/configs.common";
+import { appConfig } from "@app/common/configs.common";
 
 describe("configs.common", () => {
   describe("appConfig", () => {
