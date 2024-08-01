@@ -63,9 +63,7 @@ export const AppSplash = ({}: AppSplashProps): React.ReactElement => {
   }, [isAppReady]);
 
   React.useEffect(() => {
-    if (areFontsLoaded) {
-      setIsAppReady(true);
-    }
+    setIsAppReady(areFontsLoaded);
   }, [areFontsLoaded]);
 
   return (
